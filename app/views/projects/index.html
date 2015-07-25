@@ -1,0 +1,12 @@
+
+<a href="#/">Back</a>
+<h1>Projects</h1>
+
+<div ng-controller="ProjectsController as projects">
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="project in projects.projects">
+      <a href="#/projects/{{ project.id }}">{{ project.title }}</a>
+      <span class="label label-info pull-right">{{ project.tickets.length }}</span>
+    </li>
+  </ul>
+</div>
